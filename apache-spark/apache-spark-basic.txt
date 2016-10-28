@@ -1,0 +1,25 @@
+map :It returns a new RDD by applying a function to each element of the RDD.   Function in map can return only one item.
+
+flatMap: Similar to map, it returns a new RDD by applying  a function to each element of the RDD, but output is flattened.
+Also, function in flatMap can return a list of elements (0 or more)
+
+sc.parallelize([3,4,5]).map(lambda x: [x,  x*x]).collect() 
+Output:[[3, 9], [4, 16], [5, 25]]
+
+sc.parallelize([3,4,5]).flatMap(lambda x: [x, x*x]).collect() 
+Output: notice flattened list[3, 9, 4, 16, 5, 25]
+
+
+
+Collaborative filtering: based on user
+        -   Latent factor analysis - identify hidden factors that influence a user's liking
+               like: genre of movie, chemistry of actors, commercial appeal, drama, comedic
+               USER-PRODUCT-RATING matrix
+               USER-FACTOR matrix
+               PRODUCT-FACTOR matrix
+
+Content based filtering: based on product
+
+
+
+    pio template get PredictionIO/template-scala-parallel-universal-recommendation

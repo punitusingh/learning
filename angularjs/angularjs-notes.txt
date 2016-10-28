@@ -1,0 +1,12 @@
+<form ng-submit="mainCtrl.submitUser(mainCtrl.user)">
+
+</form>
+
+mainCtrl.submitUser(mainCtrl.user) : means you can pass model mainCtrl.user to a function mainCtrl.submitUser like this 
+
+
+data : put in json file.
+
+SearchModel: will use $http service to read data from file
+
+$stateParamService
